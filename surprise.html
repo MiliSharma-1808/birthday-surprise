@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You! 🎉</title>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?birthday,celebration') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .surprise-button {
+            background-color: #ff4081;
+            color: white;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .surprise-button:hover {
+            background-color: #e91e63;
+        }
+        #cake-gif {
+            display: none;
+            margin-top: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎶 A Special Surprise for You! 🎶</h1>
+    <p class="message">Click the button below for a sweet surprise! 🎂💖</p>
+    <button class="surprise-button" onclick="showSurprise()">Surprise!</button>
+    <br>
+    <img id="cake-gif" src="https://media.giphy.com/media/I3ZlLbB5YcCZW/giphy.gif" alt="Cake Cutting Animation">
+    
+    <script>
+        function showSurprise() {
+            document.getElementById('cake-gif').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

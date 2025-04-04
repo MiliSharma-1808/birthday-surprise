@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(to bottom, #2e004f, #000);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.artist-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.artist-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.artist-info h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.artist-info p {
+    font-size: 1.2rem;
+}
+
+.play-btn, .follow-btn {
+    background-color: #1db954;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.song-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.song-list li {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.controls button {
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}

@@ -1,0 +1,71 @@
+body {
+    background:url(./download.jpg);
+    background-size: 50%;
+    background-position:left;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align:center;
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+}
+
+.lyrics-container {
+    width: 400px;
+    height: 400px;
+    
+    overflow-y: auto;
+    padding: 15px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.song-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.song-container h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+}
+
+.floating-notes img {
+    width: 40px;
+    opacity: 0.8;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    to { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
