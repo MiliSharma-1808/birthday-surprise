@@ -9,32 +9,57 @@
 <body>
     <div class="playlist-container">
         <div class="artist-header">
-            <img src="didu.jpg" alt="Didu's Image" class="artist-image">
+            <img src="Sd2.jpg" alt="Shrishty DI Image" class="artist-image">
             <div class="artist-info">
-                <h1>Didu</h1>
-                <p>Verified Artist</p>
+                <h1>Shrishty Gupta</h1>
+                <p>Verified Artist <img src="verify.png" height="20"></p>
                 <p>Monthly listeners: 10,000+</p>
-                <button class="play-btn">▶ Play</button>
+                <button class="play-btn" id="main-play-btn">▶ Play</button>
                 <button class="follow-btn">Following</button>
             </div>
         </div>
+
         <div class="song-list">
             <h2>Popular Songs</h2>
-            <ul>
-                <li>Song 1 <span>▶</span></li>
-                <li>Song 2 <span>▶</span></li>
-                <li>Song 3 <span>▶</span></li>
-                <li>Song 4 <span>▶</span></li>
-            </ul>
+            <div class="scroll-container">
+                <ul>
+                    <li onclick="playAudio(0)">1. Tumse Jo Mila Nahi  <span>▶</span></li>
+                    <li onclick="playAudio(1)">2. Agar Tum Saath Ho  <span>▶</span></li>
+                    <li onclick="playAudio(2)">3. Tu Hain Toh <span>▶</span></li>
+                    <li onclick="playAudio(3)">4. Satranga <span>▶</span></li>
+                    <li onclick="playAudio(4)">5. Zara Zara <span>▶</span></li>
+                    <li onclick="playAudio(5)">6. Lag Ja Gale Se Phir  <span>▶</span></li>
+                    <li onclick="playAudio(6)">7. Perfect <span>▶</span></li>
+                    <h2>
+                    Popular Bhajans
+                    </h2>
+                    <li onclick="playAudio(7)">1. Tum Prem Ho <span>▶</span></li>
+                    <li onclick="playAudio(8)">2. Ram Aayenge <span>▶</span></li>
+                    <li onclick="playAudio(9)">3. Janani Me Ram Doot Hanuman<span>▶</span></li>
+                    <li onclick="playAudio(10)">4. Ram Siya Ram <span>▶</span></li>
+                    <li onclick="playAudio(11)">Song 12 <span>▶</span></li>
+                    <li onclick="playAudio(12)">Song 13 <span>▶</span></li>
+                </ul>
+            </div>
         </div>
+
         <div class="player-bar">
-            <p>Now Playing: Song 1</p>
+            <p id="now-playing">Now Playing: None</p>
+            <audio id="audio-player">
+                <source id="audio-source" src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <input type="range" id="seek-bar" min="0" value="0" step="1">
+
             <div class="controls">
-                <button>⏮</button>
-                <button>▶</button>
-                <button>⏭</button>
+                <button onclick="prevSong()">⏮</button>
+                <button id="play-pause-btn">▶</button>
+                <button onclick="nextSong()">⏭</button>
             </div>
         </div>
     </div>
+
+    <script src="playlist-script.js"></script>
 </body>
 </html>

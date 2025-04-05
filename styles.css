@@ -20,6 +20,7 @@ h1 {
     font-size: 50px;
     color: #fff;
     margin-bottom: 10px;
+    
 }
 
 .birthday-note {
@@ -205,3 +206,10 @@ audio {
 
 
 
+.birthday-cake {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 50px;
+  color: #ff69b4;
+  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.8);
+}

@@ -1,25 +1,48 @@
-function openGift(page) {
-    window.location.href = page;
-}
+window.addEventListener("DOMContentLoaded", () => {
+    const music = document.getElementById("background-music");
 
-// Party popper animation
-$(document).ready(function() {
-    $(".party-popper img").hide().fadeIn(1000).delay(2000).fadeOut(1000);
+    const savedTime = localStorage.getItem("musicTime");
+    const musicStopped = localStorage.getItem("musicStopped");
 
-    // Start floating balloons on the sides
-    $(".balloon-left").css({
-        left: "5%",
-        animationDuration: (Math.random() * 3 + 4) + "s"
+    if (musicStopped !== "true" && savedTime) {
+        music.currentTime = parseFloat(savedTime);
+    }
+
+    // Start music muted (allowed), then attempt unmute
+    music.muted = true;
+    music.play().then(() => {
+        console.log("Muted autoplay started");
+
+        // Try to unmute after a short time
+        setTimeout(() => {
+            music.muted = false;
+            music.volume = 0.5; // smooth audio fade-in
+        }, 1000);
+
+    }).catch((err) => {
+        console.log("Autoplay failed. Waiting for click...");
+        // Wait for user click, just once
+        document.body.addEventListener("click", () => {
+            music.muted = false;
+            music.play();
+        }, { once: true });
     });
 
-    $(".balloon-right").css({
-        right: "5%",
-        animationDuration: (Math.random() * 3 + 4) + "s"
-    });
+    // Save current position for return visit
+    setInterval(() => {
+        if (!music.paused) {
+            localStorage.setItem("musicTime", music.currentTime.toString());
+        }
+    }, 1000);
 });
 
-
-function playPoemAudio() {
-    let audio = document.getElementById("poemAudio");
-    audio.play();
+function openGift(url) {
+    const music = document.getElementById('background-music');
+    if (music && !music.paused) {
+        music.pause();
+        music.currentTime = 0;
+        localStorage.setItem("musicStopped", "true");
+        localStorage.removeItem("musicTime");
+    }
+    window.location.href = url;
 }
