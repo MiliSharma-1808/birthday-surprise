@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Surprise</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Happiest Birthday, Shrishty Didu! 🎉</h1>
-        <p class="birthday-note">
-            Wishing you a day filled with love, laughter, and endless joy! 
-            May all your dreams come true and your heart be filled with happiness. 
-            You are an inspiration, a light, and truly special! 💖🎂
-            Your kindness, creativity, and passion shine through everything you do.
-            May this year bring you success, love, and all the happiness you deserve.
-            Keep shining, keep smiling, and keep being the amazing person you are! ✨🎶
-        </p>
+   
+</div>
 
-        <div class="gift-section">
-            <button class="gift-btn" onclick="openGift('poem.html')">
-                <img src="./gift-removebg-preview.png" alt="Gift 1">
-                <p>Poem for You</p>
-            </button>
-            <button class="gift-btn" onclick="openGift('song.html')">
-                <img src="./gift-removebg-preview.png" alt="Gift 2">
-                <p>A Special Song</p>
-            </button>
-            <button class="gift-btn" onclick="openGift('playlist.html')">
-                <img src="./gift-removebg-preview.png" alt="Gift 3">
-                <p>Playlist</p>
-            </button>
-            <button class="gift-btn" onclick="openGift('birthday-card.html')">
-                <img src="./gift-removebg-preview.png" alt="Gift 4">
-                <p>A Little Surprise</p>
-            </button>
-        </div>
-    </div>
+  <div class="container">
+    <h1>Happiest Birthday, Shrishty Didu! 🎉</h1>
+    <p class="birthday-note">
+      Wishing you a day filled with love, laughter, and endless joy! 
+      May all your dreams come true and your heart be filled with happiness. 
+      You are an inspiration, a light, and truly special! 💖🎂
+      Your kindness, creativity, and passion shine through everything you do.
+      May this year bring you success, love, and all the happiness you deserve.
+      Keep shining, keep smiling, and keep being the amazing person you are! ✨🎶
+    </p>
 
-    <!-- Birthday Cake -->
-    <div class="birthday-cake">
-        🎂
-        <div class="candles">
-            🕯️ 🕯️ 🕯️
-        </div>
+    <div class="gift-section">
+      <button class="gift-btn" onclick="openGift('poem.html')">
+        <img src="./gift-removebg-preview.png" alt="Gift 1" />
+        <p>Poem for You</p>
+      </button>
+      <button class="gift-btn" onclick="openGift('song.html')">
+        <img src="./gift-removebg-preview.png" alt="Gift 2" />
+        <p>A Special Song</p>
+      </button>
+      <button class="gift-btn" onclick="openGift('playlist.html')">
+        <img src="./gift-removebg-preview.png" alt="Gift 3" />
+        <p>Playlist</p>
+      </button>
+      <button class="gift-btn" onclick="openGift('birthday-card.html')">
+        <img src="./gift-removebg-preview.png" alt="Gift 4" />
+        <p>A Little Surprise</p>
+      </button>
     </div>
+  </div>
+ <!-- Birthday Cake -->
+  <div class="birthday-cake">🎂
+    <div class="candles">🕯️ 🕯️ 🕯️</div>
+  </div>
 
-    <!-- Floating Balloons on Left and Right -->
-    <div class="balloons">
-        <img src="./pngimg.com - balloon_PNG3400.png" class="balloon balloon-left" alt="Balloon">
-        <img src="./pngimg.com - balloon_PNG3400.png" class="balloon balloon-right" alt="Balloon">
-    </div>
+  <!-- Balloons -->
+  <div class="balloons">
+    <img src="./pngimg.com - balloon_PNG3400.png" class="balloon balloon-left" alt="Balloon"/>
+    <img src="./pngimg.com - balloon_PNG3400.png" class="balloon balloon-right" alt="Balloon"/>
+  </div>
 
-    <!-- Party Popper -->
-    <div class="party-popper">
-        <img src="./pngimg.com - balloon_PNG3400.png" alt="Party Popper">
-    </div>
+  
+
+  <audio id="background-music" autoplay loop muted>
+    <source src="happy-birthday.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>
